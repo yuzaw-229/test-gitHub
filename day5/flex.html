@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 800px;
+        height: 600px;
+        background-color: lightblue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      /* .flex-box {
+        border: 1px solid black;
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+      } */
+
+      .box {
+        width: 300px;
+        height: 100px;
+      }
+      .flex-box4 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100px;
+        background-color: rebeccapurple;
+       
+      }
+      .flex-box1{
+        flex-grow: 1;
+        background-color: rgb(10, 237, 10);
+      }
+      .flex-box2 {
+        flex-grow: 2;
+        background-color: rgb(21, 168, 176);
+      }
+      .flex-box3 {
+        flex-grow: 1;
+        background-color: rgb(237, 10, 10);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box flex-box1">1</div>
+      <div class="box flex-box2">2</div>
+      <div class="box flex-box3">3</div>
+      <div class="box flex-box4">4</div>
+      <div class="box flex-box5">4</div>
+      <div class="box flex-box6">4</div>
+      <div class="box flex-box7">4</div>
+      <div class="box flex-box8">4</div>
+      <div class="box flex-box9">4</div>
+      <div class="box flex-box10">4</div>
+    </div>
+  </body>
+</html>

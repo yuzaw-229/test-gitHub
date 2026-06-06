@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="account-container">
+      <h1 class="">My Account</h1>
+      <p class="subtitle">Manage your account</p>
+
+      <div class="account">
+        <input type="radio" name="tab" id="personal" checked />
+        <input type="radio" name="tab" id="security" />
+        <input type="radio" name="tab" id="orders" />
+        <input type="radio" name="tab" id="address" />
+        <input type="radio" name="tab" id="payment" />
+
+        <div class="sidebar">
+          <label for="personal">Personal Information</label>
+          <label for="security">Security</label>
+          <label for="orders">Orders</label>
+          <label for="address">Address</label>
+          <label for="payment">Payment</label>
+        </div>
+
+        <div class="content">
+          <div class="tab personal-content">
+            <h3>Personal Information</h3>
+
+            <div class="info-row">
+              <span>Email</span>
+              <span>example@gmail.com</span>
+            </div>
+
+            <div class="info-row">
+              <span>Name</span>
+              <span>Minh Nhin</span>
+            </div>
+
+            <div class="info-row">
+              <span>Phone Number</span>
+              <span>+95 912 3456 789</span>
+            </div>
+          </div>
+
+          <div class="tab security-content">
+            <h3>Security</h3>
+            <p>Change password and security settings.</p>
+          </div>
+
+          <div class="tab orders-content">
+            <h3>Orders</h3>
+            <p>Your order history will appear here.</p>
+          </div>
+
+          <div class="tab address-content">
+            <h3>Address</h3>
+            <p>Manage your shipping addresses.</p>
+          </div>
+
+          <div class="tab payment-content">
+            <h3>Payment</h3>
+            <p>Manage your payment methods.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .without-transition {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* transition: width 2s; */
+      }
+      .with-transition {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* transition: width 2s ease-in-out; */
+        transition-property: width; /* width ကို  transition  */
+        transition-duration: 2s;
+        transition-delay: 300ms;
+        transition-property: width, height, background-color;
+      }
+      .txt:hover {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+      .timTransFun {
+        transition-timing-function: ease-in-out;
+        transition-property: width, height, background-color;
+        transition-duration: 2s;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .timTransFun:hover {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+      .timTransFun-shorthand {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: margin-top 2s ease-in-out 300ms;
+      }
+      .timTransFun-shorthand:hover {
+        margin-top: 200px;
+      }
+      @keyframes mymove {
+        /* from {
+          background-color: red;
+          top: 10px;
+        }
+        to {
+          background-color: green;
+          top: 100px;
+        } */
+        0% {
+          background-color: red;
+          top: 10px;
+          left: 0px;
+        }
+        25% {
+          background-color: green;
+          top: 10px;
+          left: 200px;
+        }
+        50% {
+          background-color: red;
+          top: 100px;
+          left: 200px;
+        }
+        75% {
+          background-color: green;
+          top: 100px;
+          left: 0px;
+        }
+        100% {
+          background-color: red;
+          top: 10px;
+          left: 0px;
+        }
+      }
+      .animation-demo {
+        animation-name: mymove;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        /* animation: mymove 1s ease-in-out 20ms 3 alternate reverse; */
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+
+        animation: move 2s ease;
+      }
+
+      @keyframes move {
+        from {
+          transform: scale(1.2);
+        }
+        to {
+          transform: scale(0.2);
+        }
+      }
+
+      .card {
+        width: 150px;
+        height: 150px;
+        background: skyblue;
+
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>without Transition</h1>
+    <div class="txt without-transition"></div>
+    <h1>With Transition</h1>
+    <div class="txt with-transition"></div>
+
+    <h2>Transition Timming Function</h2>
+    <ul class="timTransFun">
+      <li>ease</li>
+      <li>ease-in-out</li>
+      <li>ease-out</li>
+      <li>ease-in</li>
+      <li>linear</li>
+    </ul>
+
+    <h1>Transition Short Hand</h1>
+    <div class="timTransFun-shorthand"></div>
+
+    <h1 class="mymove">Animation</h1>
+    <!-- <div class="animation-demo"></div> -->
+
+    <div class="box"></div>
+  </body>
+</html>

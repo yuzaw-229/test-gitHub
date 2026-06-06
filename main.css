@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#f7f7f7;
+    padding: 50px
+}
+
+.account-container{
+    max-width: 90%;
+    margin:auto;
+}
+
+h1{
+    font-size: 32px;
+    margin-bottom: 10px;;
+}
+
+.subtitle{
+    color:#5d5a5a;
+    margin-bottom: 30px;
+}
+
+.account{
+    display: flex;
+    gap:25px;
+
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.sidebar label{
+    display: block;
+    padding:16px 20px;
+    cursor:pointer;
+    border-bottom:1px solid #eee;
+    transition:.3s ease-in-out;
+}
+
+.sidebar label:hover{
+    background:#f1f1f1
+}
+
+.content{
+    flex:1;
+    background:#fff;
+    border:1px solid #e5e5e5;
+    border-radius:8px;
+    padding:25px;
+    min-height:350px;
+
+}
+
+.tab{
+    display:none;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:16px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info-row span:first-child{
+    font-weight:600;
+}
+
+#personal:checked ~ .content .personal-content,
+#security:checked ~ .content .security-content,
+#orders:checked ~ .content .orders-content,
+#address:checked ~ .content .address-content,
+#payment:checked ~ .content .payment-content{
+    display:block;
+}
+
+
+#personal:checked ~ .sidebar label[for="personal"],
+#security:checked ~ .sidebar label[for="security"],
+#orders:checked ~ .sidebar label[for="orders"],
+#address:checked ~ .sidebar label[for="address"],
+#payment:checked ~ .sidebar label[for="payment"]{
+    background:#f1f1f1;
+    border-bottom-color:#fff;
+    font-weight:600;
+    border-left:4px solid #000;
+
+}
+
